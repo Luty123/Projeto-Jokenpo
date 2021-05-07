@@ -10,7 +10,16 @@ class _JogoState extends State<Jogo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Jokenpo"),
+        title: Text(
+          "Jokenpo",
+          style: TextStyle(
+            color: Colors.black,
+            fontFamily: 'Pacifico',
+            fontSize: 35,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.yellowAccent,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,18 +30,33 @@ class _JogoState extends State<Jogo> {
             child: Text(
               "Escolha do app",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'NewTegomin'),
             ),
           ),
 //  Escolha do app
-          Image.asset("imagens/padrao.png"),
+          GestureDetector(
+            onTap: () {
+              print("Um clique");
+            },
+            onDoubleTap: () {
+              print("Dois cliques");
+            },
+            child: Image.asset("imagens/padrao.png"),
+          ),
+
 //  Resultado
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text(
               "Escolha uma das opções abaixo",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'NewTegomin'),
             ),
           ),
 //  Opções disponiveis
